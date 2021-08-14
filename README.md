@@ -1,0 +1,1 @@
+Algoritmos para auxiliar o programador
