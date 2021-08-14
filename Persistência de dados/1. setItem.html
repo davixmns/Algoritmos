@@ -1,0 +1,11 @@
+<script>
+    var nome = prompt("nome do aluno");
+    var matricula = parseInt(prompt("matricula do aluno"))
+
+    // localStorage.seItem(<chave>, <valor>);
+    localStorage.setItem("chave_nome", nome)
+    localStorage.setItem("chave_matricula", matricula);
+    
+    document.write("Nome: " + nome + "<br>")
+    document.write("Matricula :" + matricula + "<br>")
+</script>

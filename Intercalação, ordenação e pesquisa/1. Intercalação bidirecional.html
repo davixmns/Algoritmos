@@ -1,0 +1,32 @@
+<script>
+    var a = [15, 18, 42, 51];
+    var b = [8, 11, 16, 17, 44, 48, 71, 48];
+    var c = [];
+
+    var i = 0;
+    var j = 0;
+    var k = 0;
+    while (i < a.length && j < b.length) {
+        if (a[i] < b[j]) {
+            c[k] = a[i];
+            i++
+        } else {
+            c[k] = b[j];
+            j++
+        }
+        k++
+    }
+    while (i < a.length) {
+        c[k] = a[i];
+        i++
+        k++
+    }
+    while (j < b.length) {
+        c[k] = b[j];
+        j++
+        k++
+    }
+    document.write("A = " + a + "<br>");
+    document.write("B = " + b + "<br>");
+    document.write("C = " + c);
+</script>

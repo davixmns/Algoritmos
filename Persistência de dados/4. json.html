@@ -1,0 +1,26 @@
+<script>
+     var matricula, nome, nota;
+    var aluno = [];
+    var n = parseInt(prompt("Quantidade de alunos"));
+
+    var dados = "{";
+
+    for (i = 0; i < n; i++) {
+        aluno[i] = {
+            matricula: parseInt(prompt("Matricula do aluno " + i)),
+            nome: prompt("nome do aluno " + i),
+            nota: parseFloat(prompt("nota do aluno " + i)),
+        };
+        localStorage.setItem("matricula" + i, aluno[i].matricula)
+        localStorage.setItem("nome" + i, aluno[i].nome)
+        localStorage.setItem("nota" + i, aluno[i].nota)
+    }
+
+    dados = dados + "}";
+
+    for (i = 0; i < n; i++) {
+        document.write("Matricula: " + localStorage.getItem("matricula"+i) + "<br>");
+        document.write("Nome: " + localStorage.getItem("nome"+i) + "<br>")
+        document.write("nota: " + parseFloat(localStorage.getItem("nota"+i)).toFixed(1) + "<br><hr>")
+    }
+</script>

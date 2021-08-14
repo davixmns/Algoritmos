@@ -1,0 +1,22 @@
+<script>
+    var n = parseInt(prompt("Quantidade de numeros:"));
+    var vetor = [];
+    var numero;
+    var maior;
+    var posicao = 0;
+
+    for (i = 0; i < n; i++) {
+        numero = parseInt(prompt("Numero do vetor " + i));
+        vetor[i] = numero;
+    }
+    maior = vetor[0];
+
+    for (i = 1; i < n; i++) {
+        if(vetor[i] > maior) {
+            maior = vetor[i];
+            posicao = i;
+        }
+    }
+    document.write("O maior vetor é " + maior + " da posição " + posicao);
+
+</script>

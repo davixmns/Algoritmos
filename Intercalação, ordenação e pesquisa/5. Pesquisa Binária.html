@@ -1,0 +1,28 @@
+<script>
+    var v = [11, 21, 32, 43, 54, 65, 76, 87, 98, 100];
+
+    var valor = parseInt(prompt("Valor a ser pesquisado: "));
+    var achou = false;
+    var inicio = 0;
+    var fim = v.length - 1;
+    var meio;
+
+    while (!achou && inicio <= fim) {
+        meio = Math.trunc((inicio + fim) / 2);
+
+        document.write("inicio = " + inicio + "  " + "meio = " + meio + "  " + "fim = " + fim + "<br>");
+        if (v[meio] == valor) {
+            achou = true;
+        } else if (v[meio] < valor) {
+            inicio = meio + 1
+        } else {
+            fim = meio - 1;
+        }
+    }
+    if (achou) {
+        document.write("o valor está no array");
+    } else {
+        document.write("o valor não está no array");
+    }
+
+</script>

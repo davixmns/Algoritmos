@@ -1,0 +1,19 @@
+<script>
+    var contador = [];
+
+    for (i = 0; i <= 100; i++) {
+        contador[i] = 0;
+    }
+    var n = parseInt(prompt("numero de notas"));
+
+    for (i = 0; i < n; i++) {
+        var nota = parseInt(prompt("Nota:"));
+        contador[nota]++
+    }
+
+    for (i = 0; i <= 100; i++) {
+        if (contador[i] != 0) {
+            document.write("Nota " + i + ": " + contador[i] + "<br>");
+        }
+    }
+</script>

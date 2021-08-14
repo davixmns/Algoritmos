@@ -1,0 +1,13 @@
+<script>
+    var vetor = [1, 2, 3, 4, 5, 6, 7];
+    var c = vetor.length; // Tamanho do vetor
+    var meio = Math.floor(c / 2); // Posição no meio do vetor
+    var aux;
+
+    for (i = 0; i < meio; i++) {
+        aux = vetor[i];
+        vetor[i] = vetor[c - i - 1];
+        vetor[c - i - 1] = aux;
+    }
+    document.write(vetor); // Exibe os elementos do vetor
+</script>

@@ -1,0 +1,16 @@
+<script>
+    var v = [20, 35, 18, 8, 14, 41, 3, 39];
+    var aux;
+    var j;
+    document.write("vetor normal: " + v + "<br>")
+    for (var i = 1; i < v.length - 1; i++) {
+        aux = v[i]
+        j = i - 1;
+        while (j >= 0 && aux < v[j]) {
+            v[j + 1] = v[j];
+            j--;
+        }
+        v[j + 1] = aux;
+    }
+    document.write("vetor ordenado: " + v)
+</script>
